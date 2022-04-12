@@ -2,7 +2,8 @@
 
 /**
  * _islower - check if an alphabet is lower
- * Return - 1 if lower else 0
+ * @c: the character in ASCII code
+ * Return: always 1 if lower else 0
  */
 
 int _islower(int c)

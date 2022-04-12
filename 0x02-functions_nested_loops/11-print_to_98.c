@@ -6,19 +6,30 @@
  * @n: passed in argument of type integer
  * Return: nothing
  */
-
 void print_to_98(int n)
 {
-	int stat;
-
-	if(n < 0)
-		stat = 0;
-	else
-		stat = n;
-	while(stat <= 98)
+	if (n <= 98)
 	{
-		printf("%i, ", stat);
-		stat++;
+		while (n <= 98)
+		{
+			if (n == 98)
+				printf("%i", n);
+			else
+				printf("%i, ", n);
+			n++;
+		}
+	}
+	else
+	{
+		while (n >= 98)
+		{
+			if (n == 98)
+				printf("%i", n);
+			else
+				printf("%i, ", n);
+			n--;
+		}
+
 	}
 	_putchar('\n');
 }

@@ -8,6 +8,7 @@
  */
 void reverse_array(int *a, int n)
 {
+	int i;
 	int idx = 0;
 	int backIdx = n - 1;
 	int newArr[n];
@@ -18,8 +19,6 @@ void reverse_array(int *a, int n)
 		idx++;
 		backIdx--;
 	}
-
-	int i;
 
 	for (i = 0; i < n; i++)
 		*(a + i) = *(newArr + i);

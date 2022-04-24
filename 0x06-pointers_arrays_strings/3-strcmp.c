@@ -15,7 +15,7 @@ int _strcmp(char *s1, char *s2)
 
 	while (shouldLoop)
 	{
-		if (*(s1 + i) == '\0' || *(s2 + i) == '\n')
+		if (*(s1 + i) == '\0' || *(s2 + i) == '\0')
 			break;
 		val1 = (int)*(s1 + i);
 		val2 = (int)*(s2 + i);

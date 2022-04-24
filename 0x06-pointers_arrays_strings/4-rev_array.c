@@ -8,18 +8,33 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
-	int idx = 0;
-	int backIdx = n - 1;
-	int newArr[n];
+	int i, j, temp;
 
-	while (idx < n)
+	for (i = 0; i < n - 1; i++)
 	{
-		newArr[idx] = a[backIdx];
-		idx++;
-		backIdx--;
+		for (j = i + 1; j > 0; j--)
+		{
+			temp = *(a + j);
+			*(a + j) = *(a + (j - 1));
+			*(a + (j - 1)) = temp;
+		}
 	}
-
-	for (i = 0; i < n; i++)
-		*(a + i) = *(newArr + i);
 }
+
+// void reverse_array(int *a, int n)
+// {
+// 	int i;
+// 	int idx = 0;
+// 	int backIdx = n - 1;
+// 	int *newArr = malloc(n * sizeof(int));
+
+// 	while (idx < n)
+// 	{
+// 		newArr[idx] = a[backIdx];
+// 		idx++;
+// 		backIdx--;
+// 	}
+
+// 	for (i = 0; i < n; i++)
+// 		*(a + i) = *(newArr + i);
+// }

@@ -15,11 +15,12 @@ int _strcmp(char *s1, char *s2)
 
 	while (shouldLoop)
 	{
+		if (*(s1 + i) == '\0' || *(s2 + i) == '\n')
+			break;
 		val1 = (int)*(s1 + i);
 		val2 = (int)*(s2 + i);
 		if (val2 != val1)
 		{
-			shouldLoop = 0;
 			return (val1 - val2);
 		}
 		i++;

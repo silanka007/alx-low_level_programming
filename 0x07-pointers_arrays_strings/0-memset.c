@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - writes len value of value b to string s
+ * *_memset - writes len value of value b to string s
  * @s: a string
  * @b: a character
  * @n: a integer

@@ -9,7 +9,7 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-  int i = 0;
+  unsigned int i = 0;
 
   while (i < n)
   {
@@ -17,5 +17,5 @@ char *_memset(char *s, char b, unsigned int n)
     i++;
   }
 
-  return s;
+  return (s);
 }

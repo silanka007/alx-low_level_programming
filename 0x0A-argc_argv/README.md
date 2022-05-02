@@ -1,0 +1,1 @@
+argc and argv => argument count and argument vectors in c

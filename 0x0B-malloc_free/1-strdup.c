@@ -20,17 +20,17 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	copy = malloc(c + 1);
+	copy = malloc(c * sizeof(*str));
 
 	if (copy == NULL)
 		return (NULL);
 	
-	while (i < c)
+	while (i <= c)
 	{
 		copy[i] = str[i];
 		i++;
 	}
-	copy[i] = '\0';
+	copy[c] = '\0';
 	
 	return (copy);
 }

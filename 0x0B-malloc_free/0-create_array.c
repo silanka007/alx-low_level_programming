@@ -14,10 +14,10 @@ char *create_array(unsigned int size, char c)
 	char *charArr = malloc(num);
 
 	if (size == 0)
-		return NULL;
+		return (NULL);
 
 	if (charArr == NULL)
-		return NULL;
+		return (NULL);
 	while (i < num)
 	{
 		*(charArr + i) = c;

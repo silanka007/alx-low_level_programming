@@ -4,7 +4,7 @@
 int _strlen(char *s);
 
 /**
- * _strdup - 
+ * _strdup - make a copy of string
  * @str: a string
  * Return: a string
  */
@@ -24,7 +24,6 @@ char *_strdup(char *str)
 
 	if (copy == NULL)
 		return (NULL);
-	
 	while (i <= c)
 	{
 		copy[i] = str[i];
@@ -44,8 +43,10 @@ char *_strdup(char *str)
 int _strlen(char *s)
 {
 	int i = 0;
+
 	while (*s++ != '\0')
-		i += 1;
+		i++;
+	i++;
 
 	return (i);
 }

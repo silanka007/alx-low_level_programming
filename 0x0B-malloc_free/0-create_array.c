@@ -12,11 +12,11 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 		return NULL;
 	
-	int i;
+	unsigned int i = 0;
 	unsigned int num = size * sizeof(c);
 	char *charArr = malloc(num);
 
-	if(charArr == NULL)
+	if (charArr == NULL)
 		return NULL;
 	while (i < num)
 	{

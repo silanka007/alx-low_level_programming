@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
 
 int _strlen(char *s);
 
@@ -18,14 +19,18 @@ char *str_concat(char *s1, char *s2)
 	int len2;
 
 	if (s1 == NULL && s2 == NULL)
-		return ("");
+		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	i = 0;
 	j = 0;
 	s3 = malloc((len1 * sizeof(*s1)) + (len2 * sizeof(*s2)));
 	if (s3 == NULL)
-		return ("");
+		return (NULL);
 
 	while (i < len1)
 	{
@@ -54,6 +59,8 @@ int _strlen(char *s)
 {
 	int i = 0;
 
+	if (s == NULL)
+		return i;
 	while (s[i] != '\0')
 		i++;
 	return (i);

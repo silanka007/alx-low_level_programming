@@ -8,8 +8,7 @@
  *
  *Return: Returns the allocated memory
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
-{
+void *_calloc(unsigned int nmemb, unsigned int size) {
   char *mem;
   unsigned int i;
 

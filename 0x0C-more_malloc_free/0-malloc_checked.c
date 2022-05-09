@@ -8,7 +8,7 @@
  */
 void *malloc_checked(unsigned long int b)
 {
-	void *arr;
+	char *arr;
 
 	arr = malloc(b);
 

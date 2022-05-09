@@ -1,6 +1,4 @@
 #include "main.h"
-#include <limits.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -8,7 +6,8 @@
  * @b: unsigned int
  * Return: a pointer to allocated memory
  */
-void *malloc_checked(unsigned int b) {
+void *malloc_checked(unsigned int b)
+{
   void *ptr;
 
   ptr = malloc(b);

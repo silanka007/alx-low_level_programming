@@ -11,7 +11,8 @@ unsigned int str_len(char *s);
  * @n: int
  * Return: pointer
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n) {
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
   char *ptr;
   unsigned int l1, l2;
   unsigned int i;
@@ -25,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n) {
   l2 = str_len(s2);
   l2 = n >= l2 ? l2 : n;
   ptr = malloc((l1 * sizeof(*s1)) + (l2 * sizeof(*s2)) + 1);
-  if (ptr == NULL)
+  if (!ptr)
     return (NULL);
   i = 0;
   while (i < l1) {
@@ -49,7 +50,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n) {
  * s: string
  * Return: int
  */
-unsigned int str_len(char *s) {
+unsigned int str_len(char *s)
+{
   int n;
 
   n = 0;

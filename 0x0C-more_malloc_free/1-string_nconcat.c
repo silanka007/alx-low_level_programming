@@ -11,8 +11,7 @@ unsigned int str_len(char *s);
  * @n: int
  * Return: pointer
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
-{
+char *string_nconcat(char *s1, char *s2, unsigned int n) {
   char *ptr;
   unsigned int l1, l2;
   unsigned int i;
@@ -50,8 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  * s: string
  * Return: int
  */
-unsigned int str_len(char *s)
-{
+unsigned int str_len(char *s) {
   int n;
 
   n = 0;

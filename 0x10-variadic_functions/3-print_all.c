@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
-int _strlen(const char * const s);
-
 /**
  * print_all - prints all arguments
  * @format: data format
@@ -20,7 +18,6 @@ void print_all(const char * const format, ...)
 	sep = "";
 
 	va_start(pa, format);
-
 	if (format)
 	{ 
 		while (format[i])

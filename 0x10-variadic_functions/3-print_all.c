@@ -13,40 +13,44 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	va_list pa;
-	int len;
+	char *sep;
+	char *str;
 
-	len = _strlen(format);
+	i = 0;
+	sep = "";
 
 	va_start(pa, format);
-	for (i = 0; i < len; i++)
-	{
-		if (format[i] == 'c')
-			printf("%c", va_arg(pa, int));
-		else if (format[i] == 'i')
-			printf("%i", va_arg(pa, int));
-		else if (format[i] == 'f')
-			printf("%f", va_arg(pa, double));
-		else if (format[i] == 's')
-			printf("%s", va_arg(pa, char *));
+
+	if (format)
+	{ 
+		while (format[i])
+		{
+			switch (format[i])
+			{
+				case 'i':
+					printf("%s%i", sep, va_arg(pa, int));
+					break;
+				case 'c':
+					printf("%s%c", sep, va_arg(pa, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(pa, double));
+					break;
+				case 's':
+					str = va_arg(pa, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			i++;
+			sep = ", ";
+		}
 	}
 	va_end(pa);
 	printf("\n");
-}
-
-
-/**
- * _strlen - counts a string
- * @s: string
- * Return: int
- */
-int _strlen(const char * const s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-
-	return (i);
 }
 

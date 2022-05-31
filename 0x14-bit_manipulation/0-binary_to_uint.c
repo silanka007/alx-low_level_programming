@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 unsigned int _two_to_pow(unsigned int power);
 unsigned int _strlen(const char *b);

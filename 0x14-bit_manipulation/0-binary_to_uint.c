@@ -35,11 +35,6 @@ unsigned int binary_to_uint(const char *b)
 	return (result);
 }
 
-/**
- * _two_to_pow - calculate two to power
- * @power: power base
- * Return: unsigned int
- */
 unsigned int _two_to_pow(unsigned int power)
 {
 	unsigned int i;
@@ -54,11 +49,6 @@ unsigned int _two_to_pow(unsigned int power)
 	return (res);
 }
 
-/**
- * _strlen - compute length of string
- * @b: string
- * Return: unsigned int
- */
 unsigned int _strlen(const char *b)
 {
 	unsigned int i = 0;

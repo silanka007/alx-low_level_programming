@@ -29,7 +29,7 @@ unsigned int binary_to_uint(const char *b)
 		idx = len - i;
 		if (b[i] != '1' && b[i] != '0')
 			return (0);
-		current = b[i] == '1' ? 1 : 0; 
+		current = b[i] == '1' ? 1 : 0;
 		result += current * _two_to_pow(idx - 1);
 		i++;
 	}
